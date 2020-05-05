@@ -2,7 +2,7 @@
     <div class="main page-container">
         <div class="page-container">
             <TvBox />
-            <div class="coloors">Nigga please</div>
+            <!--Cronograma-->
         </div>
     </div>
 </template>

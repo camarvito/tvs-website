@@ -36,6 +36,8 @@ export default {
     margin-top: 5rem;
     margin-bottom: auto;
 
+    animation: 1.5s ease-in slideInFromRight;
+
     color: $white;
 
     &__main {

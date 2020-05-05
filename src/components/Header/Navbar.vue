@@ -20,7 +20,7 @@ export default {
     components: { Button },
     methods: {
         goToStore() {
-            window.open('https://play.google.com/')
+            window.open('https://play.google.com/store')
         }
     }
 }
@@ -45,13 +45,17 @@ export default {
 
         &--item {
             display: inline;
-            color: $grey-1;
+            color: $grey-2;
             margin: 0 3.5rem;
             text-transform: uppercase;
             letter-spacing: 0.05rem;
             font-size: 1.4rem;
             font-weight: bold;
             cursor: pointer;
+
+            &:hover {
+                color: $grey-1;
+            }
 
             &.active {
                 color: $white;
