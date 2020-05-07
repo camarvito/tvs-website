@@ -5,7 +5,7 @@
         </svg>
         <ul class="navbar__list">
             <li class="navbar__list--item">Home</li>
-            <li class="navbar__list--item active">Sobre Nós</li>
+            <li class="navbar__list--item active">Sobre nós</li>
             <li class="navbar__list--item">Patrocinadores</li>
             <li class="navbar__list--item">Fale Conosco</li>
         </ul>

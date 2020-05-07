@@ -2,24 +2,24 @@
     <div class="main page-container">
         <div class="page-container">
             <TvBox />
-            <!--Cronograma-->
+            <Schedule />
         </div>
     </div>
 </template>
 
 <script>
 import TvBox from './TvBox'
+import Schedule from './Schedule'
 
 export default {
     name: 'Main',
-    components: { TvBox }
+    components: { TvBox, Schedule }
 }
 </script>
 
 <style lang="scss">
 .main {
     position: relative;
-    height: 100vh;
     background-color: $body-bg;
 }
 

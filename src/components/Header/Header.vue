@@ -28,7 +28,7 @@ export default {
 .header {
     display: flex;
     flex-direction: column;
-    height: 90vh;
+    height: 60rem;
     background-image: url('../../assets/img/header-bg.png');
 }
 
