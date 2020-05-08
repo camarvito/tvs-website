@@ -5,7 +5,18 @@
             title="Patrocinadores"
             alignment="center"
         />
-        <div>Pqp que saudade de vc</div>
+        <div class="aa page-container" style="margin-top: 3rem;">
+            <div class="bb">A</div>
+        </div>
+        <div class="cactus__container">
+            <svg style="height: 90px; width: 90px;">
+                <use xlink:href="@/assets/svg/cacto-mini.svg#cactus" />
+            </svg>
+            <svg style="height: 280px;
+    width: 270px;">
+                <use xlink:href="@/assets/svg/cacto.svg#cactus" />
+            </svg>
+        </div>
     </div>
 </template>
 
@@ -17,5 +28,23 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+.aa {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10rem;
+}
+
+.bb {
+    height: 10rem;
+    width: 100%;
+    background-color: black;
+}
+
+.cactus__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 3rem;
+}
 </style>
