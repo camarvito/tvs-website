@@ -44,7 +44,7 @@ export default {
 
 <style lang="scss">
 .contact {
-    position: absolute;
+    position: relative;
     background-color: #f9f5eb;
     width: 100%;
 

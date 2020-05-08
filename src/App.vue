@@ -18,7 +18,7 @@ import Contact from './components/Contact/Contact'
 import Footer from './components/Footer/Footer'
 
 export default {
-    components: { About, Header, Main, Partners, Contact }
+    components: { About, Header, Main, Partners, Contact, Footer }
 }
 </script>
 
