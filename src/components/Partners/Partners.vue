@@ -5,8 +5,16 @@
             title="Patrocinadores"
             alignment="center"
         />
-        <div class="aa page-container" style="margin-top: 3rem;">
-            <div class="bb">A</div>
+        <div class="partners__wrap page-container">
+            <a target="_blank" href="https://www.quixada.ufc.br/">
+                <img src="@/assets/img/ufc-logo.png" height="80px" />
+            </a>
+            <a target="_blank" href="https://www.quixada.ufc.br/">
+                <img src="@/assets/img/ufc-logo.png" height="80px" />
+            </a>
+            <a target="_blank" href="https://www.quixada.ufc.br/">
+                <img src="@/assets/img/ufc-logo.png" height="80px" />
+            </a>
         </div>
         <div class="cactus__container">
             <svg style="height: 90px; width: 90px;">
@@ -29,16 +37,20 @@ export default {
 </script>
 
 <style lang="scss">
-.aa {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10rem;
-}
+.partners__wrap {
+    text-align: center;
+    margin: 5rem 0 12rem 0;
 
-.bb {
-    height: 10rem;
-    width: 100%;
-    background-color: black;
+    img {
+        margin: 0 1.5rem;
+        filter: saturate(0);
+        transition: 0.3s;
+
+        &:hover {
+            filter: saturate(1);
+            transform: scale(1.1);
+        }
+    }
 }
 
 .cactus__container {

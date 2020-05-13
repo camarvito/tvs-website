@@ -4,10 +4,18 @@
             <use xlink:href="@/assets/svg/logo-light.svg#logo" />
         </svg>
         <ul class="navbar__list">
-            <li class="navbar__list--item">Home</li>
-            <li class="navbar__list--item active">Sobre nós</li>
-            <li class="navbar__list--item">Patrocinadores</li>
-            <li class="navbar__list--item">Fale Conosco</li>
+            <li class="navbar__list--item active">
+                <a href="#home">Home</a>
+            </li>
+            <li class="navbar__list--item">
+                <a href="#about">Sobre Nós</a>
+            </li>
+            <li class="navbar__list--item">
+                <a href="#partners">Patrocinadores</a>
+            </li>
+            <li class="navbar__list--item">
+                <a href="#contact">Fale Conosco</a>
+            </li>
         </ul>
         <Button title="Baixar Aplicativo" :action="goToStore" />
     </nav>
@@ -29,8 +37,11 @@ export default {
 <style lang="scss">
 .navbar {
     display: flex;
+    width: 100%;
     align-items: center;
+    // position: fixed;
     // background-color: $nav-bg;
+    // z-index: 1000;
 
     &__logo {
         height: 10rem;
@@ -52,6 +63,12 @@ export default {
             font-size: 1.4rem;
             font-weight: bold;
             cursor: pointer;
+
+            a,
+            a:visited {
+                color: inherit;
+                text-decoration: none;
+            }
 
             &:hover {
                 color: $grey-1;

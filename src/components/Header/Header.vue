@@ -4,8 +4,7 @@
         <div class="title page-container">
             <h1 class="title__main">
                 Diversão,
-                <br />Cultura e
-                <br />Informação
+                <br />Cultura e <br />Informação
             </h1>
             <h2 class="title__sub">
                 Saiba de tudo que ocorre no sertão central direto da
@@ -36,7 +35,7 @@ export default {
     margin-top: 5rem;
     margin-bottom: auto;
 
-    animation: 1.5s ease-in slideInFromRight;
+    animation: 1.5s ease-in fadeIn;
 
     color: $white;
 

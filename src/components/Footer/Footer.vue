@@ -6,9 +6,18 @@
                     <use xlink:href="@/assets/svg/logo-light.svg#logo" />
                 </svg>
                 <div class="footer__info--legal">
-                    Copyright 2019 - 2020
+                    © 2020 - 2021
                     <br />Emissora Tv Sertão.
                     <br />Todos os direitos reservados.
+                    <br />
+                    <span>
+                        Design by
+                        <a
+                            target="_blank"
+                            href="https://www.instagram.com/draw.arley/"
+                        >Arley</a> and
+                        <a target="_blank" href="https://github.com/camarvito">Vito</a>
+                    </span>
                 </div>
             </div>
             <div class="footer__social-media">
@@ -63,9 +72,20 @@ export default {}
             display: flex;
             flex-direction: column;
             margin-top: 1rem;
-            line-height: 2rem;
+            line-height: 1.6rem;
             color: #fff;
-            font-size: 1.4rem;
+            font-size: 1.2rem;
+
+            span {
+                a,
+                a:visited {
+                    color: inherit;
+                    text-decoration: none;
+                    &:hover {
+                        color: $btn-green;
+                    }
+                }
+            }
         }
     }
 

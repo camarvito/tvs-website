@@ -1,8 +1,8 @@
 <template>
-    <div class="schedule-card">
+    <div class="schedule-card" @click="emitSelect">
         <div
             class="schedule-card__title"
-            :class="{ 'active': program.isSelected }"
+            :class="{ active: program.isSelected }"
         >{{ program.title }}</div>
         <div class="schedule-card__info">
             <div class="schedule-card__info--subtitle">Informações</div>
@@ -32,17 +32,22 @@ export default {
             type: Object,
             required: true
         }
+    },
+    methods: {
+        emitSelect() {
+            this.$emit('cardClicked', this.program.title)
+        }
     }
 }
 </script>
 
 <style lang="scss">
 .schedule-card {
-    // height: 28rem;
-    width: 25rem;
+    min-width: 25rem;
     background-color: $white;
     margin: 3rem 1.5rem;
     border-radius: 0.5rem;
+    cursor: pointer;
     box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
 
     &__title {
