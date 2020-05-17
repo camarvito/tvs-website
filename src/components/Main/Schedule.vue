@@ -29,21 +29,21 @@ export default {
     justify-content: space-between;
 
     &--main {
-        color: #20201f;
+        color: var(--text-color-4);
         text-transform: uppercase;
         font-weight: 600;
         font-size: 2.4rem;
     }
 
     &--more {
-        color: #2ccf72;
+        color: var(--green-1);
         font-weight: 600;
         font-size: 1.6rem;
     }
 }
 
 .schedule-date {
-    color: #666;
+    color: var(--text-color-3);
     font-size: 1.6rem;
     line-height: 2rem;
 

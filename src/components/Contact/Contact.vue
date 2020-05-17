@@ -59,7 +59,7 @@ export default {
 .contact {
     padding-top: 5rem;
     padding-bottom: 5rem;
-    background-color: #f9f5eb;
+    background-color: var(--contact-bg);
     width: 100%;
 
     &__container {
@@ -90,7 +90,7 @@ export default {
         & label {
             font-weight: 600;
             font-size: 1.6rem;
-            color: #666;
+            color: var(--text-color-3);
         }
 
         & input[type*='text'],
@@ -103,7 +103,7 @@ export default {
             font-family: 'Muli';
             font-size: 1.4rem;
             font-weight: 600;
-            background-color: #fff;
+            background-color: var(--white);
             box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.05);
         }
 

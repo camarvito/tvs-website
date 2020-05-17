@@ -1,5 +1,5 @@
 <template>
-    <div id="app">
+    <div id="app" :theme="theme">
         <Header id="home" />
         <Main />
         <About id="about" />
@@ -18,7 +18,12 @@ import Contact from './components/Contact/Contact'
 import Footer from './components/Footer/Footer'
 
 export default {
-    components: { About, Header, Main, Partners, Contact, Footer }
+    components: { About, Header, Main, Partners, Contact, Footer },
+    computed: {
+        theme() {
+            return this.$store.state.darkTheme ? 'dark' : 'light'
+        }
+    }
 }
 </script>
 

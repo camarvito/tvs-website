@@ -20,13 +20,7 @@ export default {
 <style lang="scss">
 .main {
     position: relative;
-    background-color: $body-bg;
-}
-
-.coloors {
-    display: block;
-    // z-index: 100;
-    width: 100%;
-    background-color: orangered;
+    background-color: var(--body-bg);
+    transition-duration: 0.3s;
 }
 </style>

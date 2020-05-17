@@ -30,7 +30,7 @@ export default {
     display: flex;
     flex-direction: column;
     height: 70vh;
-    background-color: $body-bg;
+    background-color: var(--body-bg);
 
     &__vetor {
         margin-top: -10rem;
@@ -48,7 +48,7 @@ export default {
             margin-top: 4rem;
             font-family: 'Merriweather';
             font-size: 1.6rem;
-            color: #8c8c8c;
+            color: var(--text-color-2);
         }
 
         &--icon-container {

@@ -16,17 +16,17 @@ export default {
     align-self: flex-start;
     font-size: 2.4rem;
     font-weight: 600;
-    color: $black;
+    color: var(--text-color-1);
     text-transform: uppercase;
 }
 
 .text[alignment*='left'] {
     padding: 1rem 6rem 1rem 0;
-    border-bottom: 2px solid #219653;
+    border-bottom: 2px solid var(--green-2);
 }
 
 .text[alignment*='center'] {
     padding: 1rem 3rem;
-    border-bottom: 2px solid #219653;
+    border-bottom: 2px solid var(--green-2);
 }
 </style>

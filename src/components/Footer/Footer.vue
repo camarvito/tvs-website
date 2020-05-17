@@ -50,7 +50,7 @@ export default {}
 <style lang="scss">
 .footer {
     height: 15rem;
-    background-color: #64625e;
+    background-color: var(--footer-bg);
 
     &__container {
         display: flex;
@@ -73,7 +73,7 @@ export default {}
             flex-direction: column;
             margin-top: 1rem;
             line-height: 1.6rem;
-            color: #fff;
+            color: var(--white);
             font-size: 1.2rem;
 
             span {
@@ -82,7 +82,7 @@ export default {}
                     color: inherit;
                     text-decoration: none;
                     &:hover {
-                        color: $btn-green;
+                        color: var(--green-1);
                     }
                 }
             }
@@ -94,7 +94,7 @@ export default {}
         flex-direction: column;
         text-transform: uppercase;
         letter-spacing: 0.2rem;
-        color: #fff;
+        color: var(--white);
         font-weight: 600;
         font-size: 1.4rem;
 
@@ -102,7 +102,12 @@ export default {}
             margin: 0 1rem;
             height: 3.2rem;
             width: 3.2rem;
-            fill: #fff;
+            fill: var(--white);
+            cursor: pointer;
+
+            &:hover {
+                fill: var(--green-1);
+            }
         }
     }
 }

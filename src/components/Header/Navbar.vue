@@ -56,7 +56,7 @@ export default {
 
         &--item {
             display: inline;
-            color: $grey-2;
+            color: var(--grey-2);
             margin: 0 3.5rem;
             text-transform: uppercase;
             letter-spacing: 0.05rem;
@@ -71,11 +71,11 @@ export default {
             }
 
             &:hover {
-                color: $grey-1;
+                color: var(--grey-1);
             }
 
             &.active {
-                color: $white;
+                color: var(--white);
                 cursor: default;
             }
 

@@ -149,7 +149,7 @@ export default {
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: #fff;
+        background-color: var(--tv-border);
         box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
         border-radius: 8rem;
         height: 5rem;
@@ -180,7 +180,7 @@ export default {
         transition: transform 150ms linear;
         &[disabled] {
             opacity: 0.2;
-            border-color: black;
+            border-color: var(--text-color-1);
         }
     }
 
