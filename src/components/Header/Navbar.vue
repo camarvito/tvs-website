@@ -39,6 +39,7 @@ export default {
     display: flex;
     width: 100%;
     align-items: center;
+    height: 10rem;
     // position: fixed;
     // background-color: $nav-bg;
     // z-index: 1000;
@@ -46,6 +47,17 @@ export default {
     &__logo {
         height: 10rem;
         width: 15.3rem;
+
+        @include respond(tab-land) {
+            display: none;
+        }
+
+        @include respond(tab-port) {
+            display: block;
+            width: 17rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 
     &__list {
@@ -53,6 +65,14 @@ export default {
         justify-content: flex-end;
         flex: 1;
         list-style: none;
+
+        @include respond(tab-land) {
+            justify-content: space-around;
+        }
+
+        @include respond(tab-port) {
+            display: none;
+        }
 
         &--item {
             display: inline;
@@ -82,6 +102,12 @@ export default {
             &:last-child {
                 margin-right: 7rem;
             }
+        }
+    }
+
+    button {
+        @include respond(tab-port) {
+            display: none;
         }
     }
 }

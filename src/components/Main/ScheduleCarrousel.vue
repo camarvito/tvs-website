@@ -1,14 +1,20 @@
 <template>
     <div class="card-carousel-wrapper">
         <div class="card-carousel--nav-box left" @click="moveCarousel(-1)">
-            <span class="card-carousel--nav__left" :disabled="atHeadOfList"></span>
+            <span
+                class="card-carousel--nav__left"
+                :disabled="atHeadOfList"
+            ></span>
         </div>
 
         <div class="card-carousel">
             <div class="card-carousel--overflow-container">
                 <div
                     class="card-carousel-cards"
-                    :style="{ transform: 'translateX' + '(' + currentOffset + 'px' + ')'}"
+                    :style="{
+                        transform:
+                            'translateX' + '(' + currentOffset + 'px' + ')'
+                    }"
                 >
                     <ScheduleCard
                         v-for="program in programs"
@@ -21,7 +27,10 @@
         </div>
 
         <div class="card-carousel--nav-box right" @click="moveCarousel(1)">
-            <span class="card-carousel--nav__right" :disabled="atEndOfList"></span>
+            <span
+                class="card-carousel--nav__right"
+                :disabled="atEndOfList"
+            ></span>
         </div>
     </div>
 </template>
@@ -132,14 +141,25 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-    // margin: 20px 0 40px;
     color: #666a73;
+
+    @include respond(phone) {
+        padding: 0 2rem;
+    }
 }
 
 .card-carousel {
     display: flex;
     justify-content: center;
     width: 880px;
+
+    @include respond(tab-port) {
+        width: 100%;
+    }
+
+    @include respond(phone) {
+        width: 100%;
+    }
 
     &--overflow-container {
         overflow: hidden;
@@ -158,10 +178,20 @@ export default {
 
         &.right {
             margin-left: 1rem;
+
+            @include respond(phone) {
+                margin-left: 0;
+                // margin-right: 5rem;
+            }
         }
 
         &.left {
             margin-right: 1rem;
+
+            @include respond(phone) {
+                // margin-left: 5rem;
+                margin-right: 0;
+            }
         }
     }
 

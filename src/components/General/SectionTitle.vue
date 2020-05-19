@@ -23,6 +23,10 @@ export default {
 .text[alignment*='left'] {
     padding: 1rem 6rem 1rem 0;
     border-bottom: 2px solid var(--green-2);
+
+    @include respond(tab-land) {
+        padding: 1rem 3rem;
+    }
 }
 
 .text[alignment*='center'] {

@@ -1,17 +1,27 @@
 <template>
     <div class="about page-container">
-        <SectionTitle style="margin-top: 10rem;" title="Sobre nós" alignment="left" />
+        <SectionTitle
+            class="section-title-about"
+            title="Sobre nós"
+            alignment="left"
+        />
         <div class="about__content">
             <div class="about__content--text">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora quibusdam nesciunt velit
-                <br />exercitationem ea cum quasi obcaecati consequatur corrupti dolorem, officiis consequuntur repudiandae odit tenetur
-                <br />reiciendis hic beatae repellat asperiores. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                <br />Voluptatem aut explicabo sed dolorem perspiciatis iure, voluptates fuga hic nam similique.
-                <br />Repellat soluta aliquid nesciunt, doloribus sed quam quia voluptatem. Saepe!
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Tempora quibusdam nesciunt velit
+                <br />exercitationem ea cum quasi obcaecati consequatur corrupti
+                dolorem, officiis consequuntur repudiandae odit tenetur
+                <br />reiciendis hic beatae repellat asperiores. Lorem ipsum
+                dolor sit amet consectetur adipisicing elit. <br />Voluptatem
+                aut explicabo sed dolorem perspiciatis iure, voluptates fuga hic
+                nam similique. <br />Repellat soluta aliquid nesciunt, doloribus
+                sed quam quia voluptatem. Saepe!
             </div>
             <div class="about__content--icon-container">
                 <svg class="about__vetor">
-                    <use xlink:href="@/assets/svg/about-us-light.svg#about-us-light" />
+                    <use
+                        xlink:href="@/assets/svg/about-us-light.svg#about-us-light"
+                    />
                 </svg>
             </div>
         </div>
@@ -26,6 +36,14 @@ export default {
 </script>
 
 <style lang="scss">
+.section-title-about {
+    margin-top: 10rem;
+
+    @include respond(tab-land) {
+        align-self: center;
+    }
+}
+
 .about {
     display: flex;
     flex-direction: column;
@@ -42,19 +60,31 @@ export default {
         display: grid;
         grid-template-columns: 1fr 1fr;
 
+        @include respond(tab-land) {
+            grid-template-columns: 1fr;
+        }
+
         &--text {
             display: flex;
             align-items: center;
-            margin-top: 4rem;
             font-family: 'Merriweather';
             font-size: 1.6rem;
             color: var(--text-color-2);
+
+            @include respond(phone) {
+                margin: 0;
+                text-align: center;
+            }
         }
 
         &--icon-container {
             display: flex;
             align-items: center;
             justify-content: center;
+
+            @include respond(tab-land) {
+                display: none;
+            }
         }
     }
 }

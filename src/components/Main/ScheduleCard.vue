@@ -3,7 +3,9 @@
         <div
             class="schedule-card__title"
             :class="{ active: program.isSelected }"
-        >{{ program.title }}</div>
+        >
+            {{ program.title }}
+        </div>
         <div class="schedule-card__info">
             <div class="schedule-card__info--subtitle">Informações</div>
             <div class="schedule-card__info--text">
@@ -82,6 +84,11 @@ export default {
             height: 2.3rem;
             width: 2.2rem;
             fill: var(--text-color-3);
+
+            @include respond(tab-land) {
+                height: 3rem;
+                width: 2.5rem;
+            }
 
             &:last-child {
                 margin: 0.5rem;

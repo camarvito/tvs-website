@@ -1,19 +1,19 @@
 <template>
     <div class="main page-container">
         <div class="page-container">
-            <TvBox />
+            <VideoFrame />
             <Schedule />
         </div>
     </div>
 </template>
 
 <script>
-import TvBox from './TvBox'
+import VideoFrame from './VideoFrame'
 import Schedule from './Schedule'
 
 export default {
     name: 'Main',
-    components: { TvBox, Schedule }
+    components: { VideoFrame, Schedule }
 }
 </script>
 

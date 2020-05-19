@@ -7,29 +7,36 @@
                 </svg>
                 <div class="footer__info--legal">
                     © 2020 - 2021
-                    <br />Emissora Tv Sertão.
-                    <br />Todos os direitos reservados.
+                    <br />Emissora Tv Sertão. <br />Todos os direitos
+                    reservados.
                     <br />
                     <span>
                         Design by
                         <a
                             target="_blank"
                             href="https://www.instagram.com/draw.arley/"
-                        >Arley</a> and
-                        <a target="_blank" href="https://github.com/camarvito">Vito</a>
+                            >Arley</a
+                        >
+                        and
+                        <a target="_blank" href="https://github.com/camarvito"
+                            >Vito</a
+                        >
                     </span>
                 </div>
             </div>
             <div class="footer__social-media">
                 <span
                     style="align-self: flex-end; margin-bottom: 1rem; padding-right: .8rem;"
-                >Mídia Social</span>
+                    >Mídia Social</span
+                >
                 <span>
                     <svg class="footer__social-media--icon">
                         <use xlink:href="@/assets/svg/facebook.svg#facebook" />
                     </svg>
                     <svg class="footer__social-media--icon">
-                        <use xlink:href="@/assets/svg/instagram.svg#instagram" />
+                        <use
+                            xlink:href="@/assets/svg/instagram.svg#instagram"
+                        />
                     </svg>
                     <svg class="footer__social-media--icon">
                         <use xlink:href="@/assets/svg/twitter.svg#twitter" />
@@ -66,6 +73,10 @@ export default {}
         &--logo {
             width: 170px;
             height: 75px;
+
+            @include respond(phone) {
+                display: none;
+            }
         }
 
         &--legal {
@@ -100,13 +111,17 @@ export default {}
 
         &--icon {
             margin: 0 1rem;
-            height: 3.2rem;
-            width: 3.2rem;
+            height: 3.5rem;
+            width: 3.5rem;
             fill: var(--white);
             cursor: pointer;
 
             &:hover {
                 fill: var(--green-1);
+            }
+
+            @include respond(phone) {
+                margin: 0 0.5rem;
             }
         }
     }

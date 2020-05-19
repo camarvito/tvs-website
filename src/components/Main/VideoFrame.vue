@@ -1,21 +1,28 @@
 <template>
-    <div class="tv-box">
-        <div class="video-player"></div>
+    <div class="video__frame">
+        <div class="video__player">
+            <VideoPlayer />
+        </div>
         <div class="switch-light" @click="switchLight">
             {{ isLightOff.text }}
             <svg v-show="isLightOff.value" class="highlight-on">
                 <use xlink:href="@/assets/svg/highlight-on.svg#highlight-on" />
             </svg>
             <svg v-show="!isLightOff.value" class="highlight-off">
-                <use xlink:href="@/assets/svg/highlight-off.svg#highlight-off" />
+                <use
+                    xlink:href="@/assets/svg/highlight-off.svg#highlight-off"
+                />
             </svg>
         </div>
     </div>
 </template>
 
 <script>
+import VideoPlayer from './VideoPlayer'
+
 export default {
-    name: 'TvBox',
+    name: 'VideoFrame',
+    components: { VideoPlayer },
     methods: {
         switchLight() {
             this.$store.state.darkTheme = !this.$store.state.darkTheme
@@ -38,7 +45,7 @@ export default {
 </script>
 
 <style lang="scss">
-.tv-box {
+.video__frame {
     position: relative;
     display: block;
     margin: 0 auto;
@@ -49,13 +56,11 @@ export default {
     padding: 5rem;
     padding-bottom: 3rem;
     transition-duration: 0.3s;
-}
 
-.video-player {
-    background-color: var(--black);
-    border-radius: 1rem;
-    height: 40rem;
-    width: 100%;
+    @include respond(phone) {
+        padding: 3rem;
+        padding-bottom: 2rem;
+    }
 }
 
 .switch-light {
@@ -73,6 +78,10 @@ export default {
     margin: 0 0.5rem;
     transform: rotate(90deg);
     fill: var(--white);
+
+    @include respond(phone) {
+        width: 2.5rem;
+    }
 }
 
 .highlight-off {

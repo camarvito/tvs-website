@@ -1,7 +1,7 @@
 <template>
     <div class="partners">
         <SectionTitle
-            style="padding-top: 10rem; text-align: center;"
+            class="section-title-partners"
             title="Patrocinadores"
             alignment="center"
         />
@@ -9,11 +9,11 @@
             <a target="_blank" href="https://www.quixada.ufc.br/">
                 <img src="@/assets/img/ufc-logo.png" height="80px" />
             </a>
-            <a target="_blank" href="https://www.quixada.ufc.br/">
-                <img src="@/assets/img/ufc-logo.png" height="80px" />
-            </a>
-            <a target="_blank" href="https://www.quixada.ufc.br/">
-                <img src="@/assets/img/ufc-logo.png" height="80px" />
+            <a
+                target="_blank"
+                href="https://www.instagram.com/inove_ufcquixada/"
+            >
+                <img src="@/assets/img/logo-inove-blue.png" height="70px" />
             </a>
         </div>
         <div class="cactus__container">
@@ -36,15 +36,29 @@ export default {
 </script>
 
 <style lang="scss">
+.section-title-partners {
+    padding-top: 10rem;
+    text-align: center;
+
+    @include respond(phone) {
+        padding-top: 12rem;
+    }
+}
+
 .partners {
     background-color: var(--body-bg);
+    padding-top: 5rem;
 
     &__wrap {
         text-align: center;
         margin: 5rem 0 12rem 0;
 
+        @include respond(phone) {
+            margin: 4rem 0 4rem 0;
+        }
+
         img {
-            margin: 0 1.5rem;
+            margin: 2rem 2rem;
             filter: saturate(0);
             transition: 0.3s;
 
@@ -61,6 +75,10 @@ export default {
     justify-content: space-between;
     align-items: flex-end;
     padding: 0 3rem;
+
+    @include respond(phone) {
+        padding: 0;
+    }
 }
 
 .cactus__mini {

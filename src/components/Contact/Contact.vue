@@ -1,11 +1,7 @@
 <template>
     <div class="contact">
         <div class="page-container">
-            <SectionTitle
-                style="text-align: center; margin-bottom: 6rem;"
-                title="Fale Conosco"
-                alignment="center"
-            />
+            <SectionTitle class="section-title" title="Fale Conosco" alignment="center" />
             <div class="contact__container">
                 <div class="contact__icon-box">
                     <svg class="contact__vetor">
@@ -56,6 +52,14 @@ export default {
 </script>
 
 <style lang="scss">
+.section-title {
+    text-align: center;
+    margin-bottom: 6rem;
+
+    @include respond(tab-land) {
+        justify-content: center;
+    }
+}
 .contact {
     padding-top: 5rem;
     padding-bottom: 5rem;
@@ -66,6 +70,10 @@ export default {
         display: grid;
         grid-template-columns: 1fr 1fr;
         margin-top: 3rem;
+
+        @include respond(tab-land) {
+            grid-template-columns: 1fr;
+        }
     }
 
     &__icon-box {
@@ -73,6 +81,10 @@ export default {
         justify-content: center;
         align-items: flex-end;
         height: 50rem;
+
+        @include respond(tab-land) {
+            display: none;
+        }
     }
 
     &__vetor {
@@ -105,6 +117,10 @@ export default {
             font-weight: 600;
             background-color: var(--white);
             box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.05);
+
+            @include respond(tab-land) {
+                width: 100%;
+            }
         }
 
         & textarea {
@@ -117,6 +133,16 @@ export default {
             font-weight: 600;
             border: none;
             box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.05);
+
+            @include respond(tab-land) {
+                width: 100%;
+            }
+        }
+
+        & button {
+            @include respond(tab-land) {
+                align-self: center;
+            }
         }
     }
 
