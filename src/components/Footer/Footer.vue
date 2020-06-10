@@ -14,7 +14,7 @@
                         Design by
                         <a
                             target="_blank"
-                            href="https://www.instagram.com/draw.arley/"
+                            href="https://www.behance.net/arley_gomes"
                             >Arley</a
                         >
                         and

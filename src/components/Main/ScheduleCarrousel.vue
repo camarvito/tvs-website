@@ -43,8 +43,6 @@ export default {
     data() {
         return {
             currentOffset: 0,
-            windowSize: 3,
-            paginationFactor: 280,
             programs: [
                 {
                     id: 1,
@@ -103,6 +101,22 @@ export default {
         }
     },
     computed: {
+        windowSize() {
+            if (this.$mq === 'phone') {
+                return 1
+            } else if (this.$mq === 'tab-port') {
+                return 2
+            } else {
+                return 3
+            }
+        },
+        paginationFactor() {
+            if (this.$mq === 'phone') {
+                return 252
+            } else {
+                return 280
+            }
+        },
         atEndOfList() {
             return (
                 this.currentOffset <=
@@ -117,6 +131,7 @@ export default {
     },
     methods: {
         cardSelected(title) {
+            console.log(this.$mq)
             this.programs.forEach(e => {
                 if (e.title !== title) {
                     e.isSelected = false
